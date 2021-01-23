@@ -47,3 +47,7 @@ header {
   border: 1px solid #dedede;
   background-color: transparent;
 }
+
+#erase-grid.active {
+  border: 2px solid black;
+}

@@ -1,6 +1,7 @@
 let gridSize = 20;
 let gridBgColor = 'white';
 let isDrawing = false;
+let eraseDrawing = false;
 
 const gridContainer = document.querySelector('.grid-container');
 gridContainer.style.backgroundColor = gridBgColor;
@@ -11,6 +12,7 @@ const gridSizeControlValue = gridSizeControl.getAttribute('value');
 gridSizeControlLabel.textContent = gridSizeControlValue;
 
 const cleanGridBtn = document.getElementById('clean-grid');
+const eraseGridBtn = document.getElementById('erase-grid');
 
 const createGrid = (gridSize = 20) => {
   gridContainer.innerHTML = '';
@@ -23,11 +25,11 @@ const createGrid = (gridSize = 20) => {
     gridContainer.appendChild(gridItem);
     gridItem.addEventListener('mousedown', function() {
       isDrawing = true;
-      this.style.backgroundColor = 'black';
+      this.style.backgroundColor = !eraseDrawing ? 'black' : '';
     });
     gridItem.addEventListener('mousemove', function(e) {
       if (isDrawing === true) {
-        this.style.backgroundColor = 'black';
+        this.style.backgroundColor = !eraseDrawing ? 'black' : '';
       }
     });
     gridItem.addEventListener('mouseup', function() {
@@ -49,3 +51,15 @@ cleanGridBtn.addEventListener('click', () => {
   let allGridItems = document.querySelectorAll('.grid-item');
   allGridItems.forEach(g => g.style.backgroundColor = '');
 }) 
+
+function checkEraseAction() {
+  eraseDrawing = !eraseDrawing;
+  if(eraseDrawing) {
+    eraseGridBtn.classList.add('active');
+  } else {
+    eraseGridBtn.removeAttribute(classList);
+    eraseGridBtn.classList.remove('active');
+  }
+}
+
+eraseGridBtn.addEventListener('click', checkEraseAction);
