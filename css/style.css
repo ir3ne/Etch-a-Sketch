@@ -3,3 +3,38 @@
 body {
   font-family: 'Work Sans', sans-serif;
 }
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+.grid-wrapper {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 660px;
+  margin: 0 auto;
+  text-align: center;
+  height: 660px;
+  background-color: #202020;
+  border-radius: 4px;
+}
+
+.grid-container {
+  display: grid;
+  width: 600px;
+  margin: 0 auto;
+  height: 600px;
+  border: 1px solid black;
+}
+
+.grid-item {
+  border: 1px solid #dedede;
+}
