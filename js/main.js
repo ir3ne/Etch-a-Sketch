@@ -60,7 +60,6 @@ let checkEraseAction = () => {
   if(eraseDrawing) {
     eraseGridBtn.classList.add('active');
   } else {
-    eraseGridBtn.removeAttribute(classList);
     eraseGridBtn.classList.remove('active');
   }
 }
@@ -70,8 +69,7 @@ let changeGridColor = function(e) {
 }
 
 let changePenColor = function(e) {
-  penColor = e.target.value; 
-  console.log(penColor);
+  penColor = e.target.value;
 }
 
 eraseGridBtn.addEventListener('click', checkEraseAction);
