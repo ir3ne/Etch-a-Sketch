@@ -41,6 +41,7 @@ header {
   margin: 0 auto;
   height: 600px;
   border: 1px solid black;
+  cursor: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 28px'><text y='20'>🦄</text></svg>"), auto;
 }
 
 .grid-item {
