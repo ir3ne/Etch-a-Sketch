@@ -1,5 +1,6 @@
 let gridSize = 20;
 let gridBgColor = '#fafafa';
+let isDrawing = false;
 
 const gridContainer = document.querySelector('.grid-container');
 gridContainer.style.backgroundColor = gridBgColor;
@@ -18,6 +19,18 @@ const createGrid = (gridSize = 20) => {
     const gridItem = document.createElement('div');
     gridItem.classList.add('grid-item');
     gridContainer.appendChild(gridItem);
+    gridItem.addEventListener('mousedown', function() {
+      isDrawing = true;
+      this.style.backgroundColor = 'black';
+    });
+    gridItem.addEventListener('mousemove', function(e) {
+      if (isDrawing === true) {
+        this.style.backgroundColor = 'black';
+      }
+    });
+    gridItem.addEventListener('mouseup', function() {
+      isDrawing = false;
+    });
   }
 }
 
@@ -27,4 +40,5 @@ gridSizeControl.addEventListener('change', (e) => {
   let gridSizeSelected = e.target.value;
   gridSizeControlLabel.textContent = gridSizeSelected;
   createGrid(gridSizeSelected);
+  gridSize = gridSizeSelected;
 });
