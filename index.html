@@ -12,7 +12,21 @@
       <h1>Etch a Sketch</h1>
     </header>
     <div class="main">
-      <div class="controls"></div>
+      <div class="controls">
+        <div>Grid size</div>
+        <div>
+          <input 
+            type="range" 
+            id="gridsize" 
+            name="gridsize"
+            value="20"
+            min="1" 
+            max="60"
+            step="1"
+            >
+          <label id="gridsize-label" for="gridsize"></label>
+        </div>
+      </div>
       <div class="grid-wrapper">
         <div class="grid-container"></div>
       </div>

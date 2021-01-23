@@ -15,12 +15,20 @@ header {
   text-align: center;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.controls {
+  margin-right: 60px;
+}
+
 .grid-wrapper {
   display: flex;
   justify-items: center;
   align-items: center;
   width: 660px;
-  margin: 0 auto;
   text-align: center;
   height: 660px;
   background-color: #202020;
