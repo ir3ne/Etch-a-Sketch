@@ -1,5 +1,5 @@
 let gridSize = 20;
-let gridBgColor = '#fafafa';
+let gridBgColor = 'white';
 let isDrawing = false;
 
 const gridContainer = document.querySelector('.grid-container');
@@ -9,6 +9,8 @@ const gridSizeControl = document.getElementById('gridsize');
 const gridSizeControlLabel = document.getElementById('gridsize-label');
 const gridSizeControlValue = gridSizeControl.getAttribute('value');
 gridSizeControlLabel.textContent = gridSizeControlValue;
+
+const cleanGridBtn = document.getElementById('clean-grid');
 
 const createGrid = (gridSize = 20) => {
   gridContainer.innerHTML = '';
@@ -42,3 +44,8 @@ gridSizeControl.addEventListener('change', (e) => {
   createGrid(gridSizeSelected);
   gridSize = gridSizeSelected;
 });
+
+cleanGridBtn.addEventListener('click', () => {
+  let allGridItems = document.querySelectorAll('.grid-item');
+  allGridItems.forEach(g => g.style.backgroundColor = '');
+}) 
