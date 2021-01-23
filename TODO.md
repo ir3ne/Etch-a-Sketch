@@ -1,2 +1,2 @@
-[] create the grid
+[x] create the grid
 [] Export image?
