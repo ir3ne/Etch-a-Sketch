@@ -13,9 +13,12 @@
       <h1>Etch a Sketch</h1>
     </header>
     <div class="main">
+      <div class="controls-wrapper">
       <div class="controls">
         <div>
-          <div>Grid size</div>
+          <div class="controls-title">Grid size:
+            <span id="gridsize-label"></span>
+          </div>
           <input 
             type="range" 
             id="gridsize" 
@@ -25,23 +28,23 @@
             max="60"
             step="1"
             >
-          <label id="gridsize-label" for="gridsize"></label>
         </div>
         <div>
           <input type="color" id="gridColor" name="gridColor"
             value="#ffffff">
-          <label for="gridColor">Grid Background</label>
+          <label class="controls-title" for="gridColor">Grid Background</label>
         </div>
         <div>
           <input type="color" id="penColor" name="penColor"
             value="#000000">
-          <label for="penColor">Pen Color</label>
+          <label class="controls-title" for="penColor">Pen Color</label>
+        </div>
+        <div>
+          <button id="erase-grid">Erase</button>
         </div>
         <div>
           <button id="clean-grid">Clean</button>
         </div>
-        <div>
-          <button id="erase-grid">Erase</button>
         </div>
       </div>
       <div class="grid-wrapper">

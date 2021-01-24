@@ -10,7 +10,7 @@ gridContainer.style.backgroundColor = gridBgColor;
 const gridSizeControl = document.getElementById('gridsize');
 const gridSizeControlLabel = document.getElementById('gridsize-label');
 const gridSizeControlValue = gridSizeControl.getAttribute('value');
-gridSizeControlLabel.textContent = gridSizeControlValue;
+gridSizeControlLabel.textContent = `${gridSizeControlValue} x ${gridSizeControlValue}`;
 
 const gridColor = document.getElementById('gridColor');
 const penColorPicker = document.getElementById('penColor');
@@ -45,7 +45,7 @@ createGrid();
 
 gridSizeControl.addEventListener('change', (e) => {
   let gridSizeSelected = e.target.value;
-  gridSizeControlLabel.textContent = gridSizeSelected;
+  gridSizeControlLabel.textContent = `${gridSizeSelected} x ${gridSizeSelected}`;;
   createGrid(gridSizeSelected);
   gridSize = gridSizeSelected;
 });
