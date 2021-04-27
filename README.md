@@ -1,4 +1,4 @@
-# Etch-a-Sketch
+# Etch a Sketch 🎨
 
 Etch a Sketch game in vanilla JavaScript.
 
@@ -6,4 +6,4 @@ Etch a Sketch game in vanilla JavaScript.
 
 [Etch-a-Sketch](https://ir3ne.github.io/Etch-a-Sketch/)
 
-![Etch a Sketch Gig](./etch-a-sketch-gif.gif)
+![Etch a Sketch Gif](./etch-a-sketch-gif.gif)
