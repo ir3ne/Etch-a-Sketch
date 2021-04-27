@@ -1,5 +1,7 @@
 # Etch-a-Sketch
 
-**Live preview**
+Etch a Sketch game in vanilla JavaScript.
 
-https://ir3ne.github.io/Etch-a-Sketch/
+**Live demo**
+
+[Etch-a-Sketch](https://ir3ne.github.io/Etch-a-Sketch/)
